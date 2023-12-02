@@ -202,11 +202,12 @@ docker run -v /${PWD}:/home/jovyan/ -p 8888:8888 <container id>
 
 # Docker Compose
 
-Why we might need it? To launch several services at the same time. In stead of bulky docker cli commands we will utilize configuration file with much simplier syntaxis.
+Зачем нам это может понадобиться? Запустить несколько сервисов одновременно. Вместо громоздких команд docker cli мы будем использовать файл конфигурации с гораздо более простым синтаксисом.
 
-Create **docker-compose.yml** file in the folder from which you launch your conatiner.
+Создайте файл **docker-compose.yml** в папке, из которой вы запускаете свой конатинер.
 
-Fill in the docker compose file the following way.
+Заполните файл Docker Compose следующим образом.
+
 ```yml
 version: "3.1"
 services:
@@ -220,9 +221,9 @@ services:
       - 8888:8888
 ```
 
-*Context* above is the location of dockerfile.
+*Context* это расположение файла docker.
 
-To launch the container:
+Чтобы запустить контейнер:
 
 ```cmd
 docker-compose up
