@@ -24,11 +24,11 @@ docker ps
 
 ![](./img/02.png)
 
-Copy **container id**, you will need it on the next step.
+Скопируйте **идентификатор контейнера**, он понадобится вам на следующем шаге.
 
-What if i want to get into my container. For example, to install libraries to work with data, databases.
+Что, если я захочу попасть в свой контейнер? Например, установить библиотеки для работы с данными, базами данных.
 
-You need to enter in the second terminal(if you closed it after the previous command, just open the new one):
+Вам нужно войти во второй терминал (если вы закрыли его после предыдущей команды, просто откройте новый):
 
 ```cmd
 docker exec -it <mycontainer> bash
@@ -36,7 +36,7 @@ docker exec -it <mycontainer> bash
 
 ```<mycontainer>``` is you ***container id***
 
-The terminal should output something similar:
+Терминал должен вывести что-то похожее:
 
 ![](./img/03.png)
 
