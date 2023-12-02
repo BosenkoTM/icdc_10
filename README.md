@@ -83,8 +83,9 @@ pwd
 
 Полный путь будет следующим ```/home/[username]/Sample Superstore.csv```
 
-We are ready to copy the file. 
-The following command should be entered from teh terminal of you local machine. NOT from inside of the container. You may need to open a new terminal.
+опирование файла.
+
+Следующую команду следует ввести с терминала локального компьютера. НЕ изнутри контейнера. Возможно, вам придется открыть новый терминал.
 
 ```cmd
 docker cp ./files/SampleSuperstore.csv <container_id>:/home/jovyan/files/SampleSuperstore.csv
