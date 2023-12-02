@@ -309,7 +309,7 @@ df_pg.head()
 docker-compose stop
 ```
 
-To delete containers
+Удаление контейнеров:
 ```cmd
 docker-compose stop
 ```
@@ -367,11 +367,9 @@ docker-compose down
 docker volume ls
 ```
 
-You should see  ```docker_pgdata```.
-
-Theoretically we can backup our database and have it as a file and open it in DBeaver.
-
-To remove volume from your local machine:
+Вы должны увидеть ``docker pgdata``.
+Необходимо сделать резервную копию вашей базы данных, сохранить ее в виде файла и открыть в `DBeaver`.
+Чтобы удалить `volume` с локального компьютера:
 
 ```cmd
 docker volume rm <volume name>
