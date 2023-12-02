@@ -90,21 +90,19 @@ The following command should be entered from teh terminal of you local machine. 
 docker cp ./files/SampleSuperstore.csv <container_id>:/home/jovyan/files/SampleSuperstore.csv
 ```
 
-Now check if file has beedn copied. Write the command inside of the container:
-
-Let's see what we have here:
+Теперь проверьте, скопирован ли файл. Напишите команду внутри контейнера:
 
 ```cmd
 ls
 ```
 
-You should see ```SampleSuperstore.csv``` there:
+Вы должны увидеть ```SampleSuperstore.csv```:
 
 ![](./img/05.png)
 
-If you have not tried before, try to check if Jupyter notebook in container works and loads the data.
+Проверить, работает ли блокнот `Jupyter` в контейнере и загружает ли данные.
 
-In the terminal where you've launched the container, click on one of 2 links under the wording **Jupyter Notebook is running at:**
+В терминале, где  запустили контейнер, щелкните одну из двух ссылок под надписью Jupyter Notebook работает по адресу: **Jupyter Notebook is running at:**
 
 ![](./img/06.png)
 
