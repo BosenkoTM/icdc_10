@@ -106,24 +106,23 @@ ls
 
 ![](./img/06.png)
 
-Then create the notebook and enter the following code:
+Затем создайте `notebook` и введите следующий код:
 
 ```python
 import pandas as pd
 df = pd.read_csv('SampleSuperstore.csv')
 df.head()
 ```
-If you see the following output, everything works well:
+Если вы видите следующий вывод, то все работает отлично:
 
 ![](./img/07.png)
 
+# Подключение Volume
 
-# Connecting Volume
+## **Задача:**
+ Требуется скопировать данные обратно на локальный компьютер после того, как поработали над ними в блокноте Jupyter в контейнере. По аналогии с предыдущей задачей можем скопировать файл из контейнера на локальную машину.
 
-## **Issue:**
- Now what if we want to copy the data back to our local machine after we worked on it in the Jupyter notebook in the container. By analogy with the previous task we can copy the file from the container from the container to the local machine.
-
-There is a special *docker cli* command:
+Воспользунмся командой *docker cli*:
 
 ```cmd
 docker cp <container_id>:/foo.txt foo.txt
