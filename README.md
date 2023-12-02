@@ -36,7 +36,7 @@ docker exec -it <mycontainer> bash
 
 ```<mycontainer>``` is you ***container id***
 
-Терминал должен вывести что-то похожее:
+Получим:
 
 ![](./img/03.png)
 
@@ -45,7 +45,7 @@ docker exec -it <mycontainer> bash
 ```cmd
 ls
 ```
-Похоже, пока что папка **work**.
+В каталоге увидим папку **work**.
 
 ![](./img/04.png)
 
