@@ -49,22 +49,22 @@ ls
 
 ![](./img/04.png)
 
-As well we can check if Python is installed on it:
+Также можно проверить, установлен ли на нем Python::
 
 ```cmd
 python
 ```
 
-It should be pre-installed in yoru container.
+Он должен быть предварительно установлен в  контейнере..
 
-# How to copy files into the container
+# Как скопировать файлы в контейнер
 
-We will copy **csv** file to our container.
-The copy command is described in the [official documentation](https://docs.docker.com/engine/reference/commandline/cp/) and discussed in [Stakoverflow question](https://stackoverflow.com/questions/22907231/how-to-copy-files-from-host-to-docker-container)
+Скопируем файл **csv** в наш контейнер.
+Команда копирования описана в [официальной документации] (https://docs.docker.com/engine/reference/commandline/cp/) и обсуждается в [вопросе Stakoverflow] (https://stackoverflow.com/questions/22907231 /как-копировать-файлы-с-хоста-в-докер-контейнер)
 
-Download the [file](./files/SampleSuperstore.csv) to your computer.
+Загрузите [файл](./files/SampleSuperstore.csv) на компьютер.
 
-The general format of the *copy* command is:
+Общий формат команды *copy*:
 
 ```cmd
 docker cp foo.txt <container_id>:/foo.txt
