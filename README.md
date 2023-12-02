@@ -22,7 +22,7 @@ docker ps
 ```cmd
 docker run -p 8888:8888 jupyter/scipy-notebook:33add21fab64
 ```
-The following explanation was found on the same [web-site](https://jupyter-docker-stacks.readthedocs.io/en/latest/) as the above command.
+Следующее объяснение было найдено на том же [веб-сайте](https://jupyter-docker-stacks.readthedocs.io/en/latest/), что и приведенная выше команда..
 
 > This command pulls the ```jupyter/scipy-notebook``` image tagged ```33add21fab64``` from Docker Hub if it is not already present on the local host. It then starts a container running a Jupyter Notebook server and exposes the server on host port ```8888```. The server logs appear in the terminal. Visiting ```http://<hostname>:8888/?token=<token>``` in a browser loads the Jupyter Notebook dashboard page, where hostname is the name of the computer running docker and token is the secret token printed in the console. The container remains intact for restart after the notebook server exits.
 
