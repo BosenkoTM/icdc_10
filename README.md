@@ -12,16 +12,17 @@ docker run -p 8888:8888 jupyter/scipy-notebook:33add21fab64
 ```
 Следующее объяснение было найдено на том же [веб-сайте](https://jupyter-docker-stacks.readthedocs.io/en/latest/), что и приведенная выше команда..
 
-> This command pulls the ```jupyter/scipy-notebook``` image tagged ```33add21fab64``` from Docker Hub if it is not already present on the local host. It then starts a container running a Jupyter Notebook server and exposes the server on host port ```8888```. The server logs appear in the terminal. Visiting ```http://<hostname>:8888/?token=<token>``` in a browser loads the Jupyter Notebook dashboard page, where hostname is the name of the computer running docker and token is the secret token printed in the console. The container remains intact for restart after the notebook server exits.
+> Эта команда извлекает изображение ```jupyter/scipy-notebook``` с тегом ```33add21fab64`` из Docker Hub, если оно еще не присутствует на локальном хосте.
+> Затем он запускает контейнер, на котором работает сервер Jupyter Notebook, и предоставляет серверу хост-порт ``8888``. Журналы сервера появляются в терминале.
+> При посещении ```http://<hostname>:8888/?token=<token>``` в браузере загружается страница панели управления Jupyter Notebook, где имя хоста — это имя компьютера, на котором запущен Docker, а token — это напечатанный секретный токен. в консоли. Контейнер остается нетронутым при перезапуске после выхода сервера ноутбука.
 
-# How to get in your container 
-
-While your container is running, open second terminal and enter the followng commnand:
+# Как попасть в  контейнер
+Пока  контейнер работает, откройте второй терминал и введите следующую команду:
 
 ```cmd
 docker ps
 ```
-You should see the following:
+Вы должны увидеть следующее:
 
 ![](./img/02.png)
 
