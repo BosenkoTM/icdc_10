@@ -1,20 +1,18 @@
-```all the commands are running from git bash```
+```все команды выполняются из git bash```
 
-# What is the docker in simple words?
+# Что такое докер простыми словами?
 
-It is virtual entity, cerated to solve specific tasks. This is not a full-fledges virtual system such as Virtual Box. It is just a cut version of the virtual machine which will serve only ,for example, Jupyter notebooks. What's great about docker? If you can install docker on your computer, you can launch any possible image. You can transfer it to other person to make sure you have same development environment with other person.
-
-To check if docker is running, type in the terminal
+Это виртуальная сущность, созданная для решения конкретных задач. Это не полноценная виртуальная система типа Virtual Box. Это просто урезанная версия виртуальной машины, которая будет обслуживать только, например, ноутбуки Jupyter. Что хорошего в докере? Если вы можете установить докер на свой компьютер, вы сможете запустить любой возможный образ. Вы можете передать его другому человеку, чтобы убедиться, что у вас та же среда разработки, что и у другого человека.
 
 ```cmd
 docker ps
 ```
 
-Above commands outputs all of the containers which are launched right now.
+Приведенные выше команды выводят все контейнеры, которые запущены прямо сейчас.
 
 ![](./img/01.png)
 
-If you see just a header shown above - that's fine. It means you have installed docker correctly, just no containers are running right now.
+Если вы видите только заголовок, показанный выше — это нормально. Это означает, что вы правильно установили докер, просто сейчас ни один контейнер не запущен.
 
 ## Launching your first container
 
