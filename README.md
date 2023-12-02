@@ -14,13 +14,10 @@ docker ps
 
 Если вы видите только заголовок, показанный выше — это нормально. Это означает, что вы правильно установили докер, просто сейчас ни один контейнер не запущен.
 
-## Launching your first container
+## Запускаем ваш первый контейнер
+Многие компании имеют в докере свои репозитории, которые они постоянно обновляют: `Jupyter`, `Postgres`. Чтобы запустить блокноты Jupyter в докере, нам нужно найти правильную команду docker cli. Мы можем найти его на [Jupyter's "Read the docks" page](https://jupyter-docker-stacks.readthedocs.io/en/latest/).
 
-Many companies have their repository in docker which they constantly update: Jupyter, Postgres.
-
-To launch Jupyter notebooks in the docker, we need to find the correct docker cli command. We can find it on the [Jupyter's "Read the docks" page](https://jupyter-docker-stacks.readthedocs.io/en/latest/).
-
-Launch the following command in the terminal
+Запустите следующую команду в терминале
 
 ```cmd
 docker run -p 8888:8888 jupyter/scipy-notebook:33add21fab64
