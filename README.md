@@ -314,7 +314,7 @@ To delete containers
 docker-compose stop
 ```
 
-Adjust the *docker-compose.yml*:
+Настройте *docker-compose.yml*:
 
 ```yml
 version: "3.1"
@@ -342,25 +342,26 @@ volumes:
   pgdata:
 ```
 
-Now run:
+Теперь запустите:
 
 ```cmd
 docker-compose up --build
 ```
 
-Execute all of your python scripts that write data to the database.
+Выполните все скрипты Python, которые записывают данные в базу данных.
 
-Again, to stop containers from running
+Опять же, чтобы остановить запуск контейнеров
+
 ```cmd
 docker-compose stop
 ```
 
-To delete containers
+Удаление контейнеров
+
 ```cmd
 docker-compose down
 ```
-
-Type in command to check existing volumes on your local machine:
+Введите команду, чтобы проверить существующие `volumes` на вашем локальном компьютере:
 
 ```cmd
 docker volume ls
