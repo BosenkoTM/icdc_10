@@ -151,19 +151,19 @@ docker run -v <path to your folder on the local computer>:/home/jovyan/ -p 8888:
 docker run -v /${PWD}:/home/[username]/ -p 8888:8888 jupyter/scipy-notebook:33add21fab64
 ```
 
-# How to run terminal commands automatically at the launch
+# Как автоматически запускать команды терминала при запуске
 
-Why this is important? 
+Почему это важно?
 
-For example you are launching Jupyter notebook contaienr and want specific libraries be pre-installed.
+Например, вы запускаете содержимое блокнота Jupyter и хотите, чтобы определенные библиотеки были предварительно установлены.
 
-Originally we launched the container ```scipy-notebook:33add21fab64```. This container was not created from the scratch, per se. It was created by somebody else, realeased on docker marketplace and we are just launching it on our machine.
+Первоначально мы запустили контейнер scipy-notebook:33add21fab64. Этот контейнер сам по себе не был создан с нуля. Он был создан кем-то другим, выпущен на рынке докеров, и мы просто запускаем его на нашей машине.
 
-What's cool about docker, we can borrow someone's image(base image), for example, ```scipy-notebook:33add21fab64```, and tune it up to fit our needs.
+Что хорошего в докере, так это то, что мы можем позаимствовать чей-то образ (базовый образ), например, ```scipy-notebook:33add21fab64```, и настроить его в соответствии с нашими потребностями.
 
-We tune up the image(base image) with the **dockerfile** helper file. This file contains the description on the logic of your container.
+Мы настраиваем изображение (базовое изображение) с помощью вспомогательного файла **dockerfile**. Этот файл содержит описание логики вашего контейнера.
 
-Create in the folder, where you have been launching the image from, the file named **Dockerfile** and insert the following code inside of it.
+Создайте в папке, из которой вы запускали образ, файл с именем **Dockerfile** и вставьте в него следующий код.
 
 ```docker
 FROM jupyter/scipy-notebook:33add21fab64
@@ -171,18 +171,16 @@ FROM jupyter/scipy-notebook:33add21fab64
 RUN pip install pandas
 ```
 
-*Run* command above will be launched in the terminal in the container once the container is launched.
+Команда *Run*, указанная выше, будет запущена в терминале в контейнере после запуска контейнера.
 
-Now, how we would launch the docker after we have created the docker file?
+Теперь, как нам запустить докер после создания файла докера?
 
-
-First, we need to enter in the terminal the command:
+Сначала нам нужно ввести в терминале команду:
 
 ```cmd
 docker build .
 ```
-
-The dot(.) in the code above is the location of the *dockerfile*.
+Точка (.) в приведенном выше коде — это местоположение *dockerfile*.
 
 What we need from log/output on the screen is the container id. You can find it either:
 - after the words " => => writing image"
