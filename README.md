@@ -70,18 +70,18 @@ python
 docker cp foo.txt <container_id>:/foo.txt
 ```
 
-The first *foo.txt* is the path of the locaiton of the file on your computer (the one you have downloaded above). The second *foo.txt* is the future path to the copied file in the container.
+Первый *foo.txt* — это путь к файлу на  компьютере (тот, который вы скачали выше). Второй *foo.txt* — это будущий путь к скопированному файлу в контейнере.
 
-
-To check the location where you are once you launch the container, type in the following command from inside of the docker:
+Чтобы проверить местоположение, в котором вы находитесь после запуска контейнера, введите следующую команду изнутри докера:
 
 ```cmd
 pwd
 ``` 
-Most likely the reponse will be ```/home/jovyan```. 
-We will use this path as a prefix for the future location of the file we would like to copy into our container.
+Скорее всего, ответ будет ```/home/[username]```.
+Мы будем использовать этот путь в качестве префикса для будущего местоположения файла, который мы хотим скопировать в наш контейнер.
+- `[username]` - имя учетной записи, под которой вошли в ОС.
 
-The full path will be teh following ```/home/jovyan/SampleSuperstore.csv```
+Полный путь будет следующим ```/home/[username]/Sample Superstore.csv```
 
 We are ready to copy the file. 
 The following command should be entered from teh terminal of you local machine. NOT from inside of the container. You may need to open a new terminal.
