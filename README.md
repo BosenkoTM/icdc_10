@@ -137,28 +137,19 @@ docker cp <container_id>:/foo.txt foo.txt
 
 ```cmd
 pwd
-``` 
+```
+Выберем каталог в контейнере, который должен быть подключен к вашей папке на локальном компьютере. Я выбрал ```/home/[username]/```
 
-Decide which directory in your container shoudl be connected to your folder on local machine. I have chosen ```/home/jovyan/```
-
-Then enter the command which launches the container and attaches **volume** to it.
+Затем введите команду, которая запускает контейнер и присоединяет к нему **volume**.
 
 ```cmd
 docker run -v <path to your folder on the local computer>:/home/jovyan/ -p 8888:8888 jupyter/scipy-notebook:33add21fab64
 ``` 
-
-The previous command actually did not work on my machine. I have Windows 10 and git bash as a terminal.
-
-I found a stackoverflow [question](https://stackoverflow.com/questions/50608301/docker-mounted-volume-adds-c-to-end-of-windows-path-when-translating-from-linux) that remedies my issue.
-
-The new command will be the following:
+Или:
 
 ```cmd
-docker run -v /${PWD}:/home/jovyan/ -p 8888:8888 jupyter/scipy-notebook:33add21fab64
+docker run -v /${PWD}:/home/[username]/ -p 8888:8888 jupyter/scipy-notebook:33add21fab64
 ```
-
-Voila!
-
 
 # How to run terminal commands automatically at the launch
 
