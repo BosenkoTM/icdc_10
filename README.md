@@ -134,11 +134,6 @@ docker cp <container_id>:/foo.txt foo.txt
 Для решения данной проблемы воспользуемся технологией **volume**. Это работает так: подключаете жесткий диск к контейнеру. Таким «жестким диском» может быть просто папка на локальной машине. Эта папка будет доступна и на локальной машине и в контейнере.
 
 В терминале перейдите в папку/каталог, к которому вы хотите смонтировать тома, и получите путь:
-## **Solution:**
-
-There is such thing in docker as **volume**. It works as such you connect hard drive to the container. Such "hard drive" can be just a folder on our local machine. This folder will be visible and on the local machine and in the container.
-
-In the terminal get into the folder/directory you want to mount the volumes to and get the path by:
 
 ```cmd
 pwd
