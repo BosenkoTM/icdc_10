@@ -202,7 +202,9 @@ docker run -v /${PWD}:/home/jovyan/ -p 8888:8888 <container id>
 
 # Docker Compose
 
-Зачем нам это может понадобиться? Запустить несколько сервисов одновременно. Вместо громоздких команд docker cli мы будем использовать файл конфигурации с гораздо более простым синтаксисом.
+Зачем нам это может понадобиться? 
+
+Запустить несколько сервисов одновременно. Вместо громоздких команд docker cli мы будем использовать файл конфигурации с гораздо более простым синтаксисом.
 
 Создайте файл **docker-compose.yml** в папке, из которой вы запускаете свой конатинер.
 
@@ -229,12 +231,9 @@ services:
 docker-compose up
 ```
 
-# Launch postgress along with Jupyter
+С этого момента добавление контейнеров станет намного проще, поскольку используем docker-compose.
 
-
-From now on adding containers becomes much easier task, since we have started using docker-compose.
-
-Modify the **docker-compose.yml** file to include db:
+Измените файл **docker-compose.yml**, включив в него базу данных:
 
 ```yml
 version: "3.1"
@@ -258,7 +257,7 @@ services:
       - 5432:5432
 ```
 
-As well modify the **Dockerfile** to include new library ```psycopg2```:
+Также измените **Dockerfile**, включив в него новую библиотеку ```psycopg2```:
 
 ```
 FROM jupyter/scipy-notebook:33add21fab64
@@ -267,8 +266,7 @@ RUN pip3 install pandas psycopg2
 
 ```
 
-
-To launch the container:
+Запустить контейнер::
 
 ```cmd
 docker-compose up --build
