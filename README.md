@@ -40,12 +40,12 @@ docker exec -it <mycontainer> bash
 
 ![](./img/03.png)
 
-Let's see what we have here:
+Проверим каталог:
 
 ```cmd
 ls
 ```
-Looks like just a folder **work** so far.
+Похоже, пока что папка **work**.
 
 ![](./img/04.png)
 
