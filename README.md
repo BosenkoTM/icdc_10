@@ -266,21 +266,19 @@ RUN pip3 install pandas psycopg2
 
 ```
 
-Запустить контейнер::
+Запустить контейнер:
 
 ```cmd
 docker-compose up --build
 ```
 
 
-Open/create the notebook in your container and enter and execute the following script:
+Откройте/создайте блокнот в своем контейнере, введите и выполните следующий скрипт:
 
 ```python
 import psycopg2
 conn = psycopg2.connect("host=db dbname=postgres user=postgres password=postgres")
 ```
-
-If no errors - cool, let's continue!
 
 # Load Data to DB
 
