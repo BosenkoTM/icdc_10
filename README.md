@@ -280,13 +280,13 @@ import psycopg2
 conn = psycopg2.connect("host=db dbname=postgres user=postgres password=postgres")
 ```
 
-# Load Data to DB
+# Загрузить данные в БД
 
-Stackoverflow [question](https://stackoverflow.com/questions/2987433/how-to-import-csv-file-data-into-a-postgresql-table) is helping as usual.
+Stackoverflow [question](https://stackoverflow.com/questions/2987433/how-to-import-csv-file-data-into-a-postgresql-table).
 
-There are two methods. We will use the option which employs ```sqlalchemy library```.
+Есть два метода. Мы будем использовать вариант, в котором используется библиотека sqlalchemy.
 
-Open/create the notebook in your container and enter and execute the following script:
+Откройте/создайте блокнот в своем контейнере, введите и выполните следующий скрипт:
 
 ```python
 from sqlalchemy import create_engine
@@ -300,7 +300,7 @@ df_pg.head()
 
 ```
 
-# Add Volume to save DB data permanently on disk
+# Добавление Volume, чтобы постоянно сохранять данные БД на диске
 
 if your containers have been runnning:
 
