@@ -182,11 +182,12 @@ docker build .
 ```
 Точка (.) в приведенном выше коде — это местоположение *dockerfile*.
 
-What we need from log/output on the screen is the container id. You can find it either:
-- after the words " => => writing image"
-- after the words "successfullu buit"
+Из журнала/вывода на экран нам нужен идентификатор контейнера. Вы можете найти его либо:
+- после слов " => => writing image"
+- после слов «successfullu buit»
 
-Previously we launched the container with
+Ранее мы запустили контейнер с
+
 
 ```cmd
 docker run -v /${PWD}:/home/jovyan/ -p 8888:8888 jupyter/scipy-notebook:33add21fab64
